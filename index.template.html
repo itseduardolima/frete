@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frete Junior — Frete rápido em Manaus | Mudanças pequenas, fretes expressos e cargas</title>
-<meta name="description" content="Frete urbano em Manaus e região, direto com o motorista. Mudanças pequenas, fretes expressos e cargas em geral com uma Chevrolet Montana LT 2027. Combine o preço antes, pelo WhatsApp.">
-<meta name="keywords" content="frete manaus, frete rápido manaus, mudança pequena manaus, frete expresso, carreto manaus, frete com caminhonete, frete urgente manaus">
+<title>{{BUSINESS_NAME}} — Frete rápido em {{CITY}} | Mudanças pequenas, fretes expressos e cargas</title>
+<meta name="description" content="Frete urbano em {{CITY}} e região, direto com o motorista. Mudanças pequenas, fretes expressos e cargas em geral com uma Chevrolet Montana LT 2027. Combine o preço antes, pelo WhatsApp.">
+<meta name="keywords" content="frete {{CITY_LOWER}}, frete rápido {{CITY_LOWER}}, mudança pequena {{CITY_LOWER}}, frete expresso, carreto {{CITY_LOWER}}, frete com caminhonete, frete urgente {{CITY_LOWER}}">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://fretejunior.com.br/">
+<link rel="canonical" href="{{SITE_URL}}">
 <meta name="theme-color" content="#161513">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Frete Junior">
-<meta property="og:title" content="Frete Junior — Frete rápido em Manaus">
-<meta property="og:description" content="Frete urbano em Manaus e região, direto com o motorista. Mudanças pequenas, fretes expressos e cargas em geral. Combine o preço antes, pelo WhatsApp.">
-<meta property="og:url" content="https://fretejunior.com.br/">
-<meta property="og:image" content="https://fretejunior.com.br/og-image.jpg">
+<meta property="og:site_name" content="{{BUSINESS_NAME}}">
+<meta property="og:title" content="{{BUSINESS_NAME}} — Frete rápido em {{CITY}}">
+<meta property="og:description" content="Frete urbano em {{CITY}} e região, direto com o motorista. Mudanças pequenas, fretes expressos e cargas em geral. Combine o preço antes, pelo WhatsApp.">
+<meta property="og:url" content="{{SITE_URL}}">
+<meta property="og:image" content="{{SITE_URL_NO_SLASH}}/{{OG_IMAGE}}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Frete Junior — Frete rápido em Manaus">
-<meta name="twitter:description" content="Frete urbano em Manaus e região, direto com o motorista. Combine o preço antes, pelo WhatsApp.">
-<meta name="twitter:image" content="https://fretejunior.com.br/og-image.jpg">
+<meta name="twitter:title" content="{{BUSINESS_NAME}} — Frete rápido em {{CITY}}">
+<meta name="twitter:description" content="Frete urbano em {{CITY}} e região, direto com o motorista. Combine o preço antes, pelo WhatsApp.">
+<meta name="twitter:image" content="{{SITE_URL_NO_SLASH}}/{{OG_IMAGE}}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,39 +35,39 @@
 {
   "@context": "https://schema.org",
   "@type": "MovingCompany",
-  "name": "Frete Junior",
-  "image": "https://fretejunior.com.br/og-image.jpg",
-  "url": "https://fretejunior.com.br/",
-  "telephone": "+5592999842312",
-  "email": "contato@fretejunior.com.br",
+  "name": "{{BUSINESS_NAME}}",
+  "image": "{{SITE_URL_NO_SLASH}}/{{OG_IMAGE}}",
+  "url": "{{SITE_URL}}",
+  "telephone": "+{{WHATSAPP_NUMBER}}",
+  "email": "{{EMAIL}}",
   "priceRange": "R$",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Manaus",
-    "addressRegion": "AM",
+    "addressLocality": "{{CITY}}",
+    "addressRegion": "{{STATE}}",
     "addressCountry": "BR"
   },
   "areaServed": {
     "@type": "GeoCircle",
     "geoMidpoint": {
       "@type": "GeoCoordinates",
-      "latitude": -3.1019,
-      "longitude": -60.0250
+      "latitude": {{LAT}},
+      "longitude": {{LNG}}
     },
-    "geoRadius": "25000"
+    "geoRadius": "{{RADIUS_KM}}000"
   },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "07:00",
-      "closes": "18:00"
+      "opens": "{{HOURS_WEEKDAY_OPEN}}",
+      "closes": "{{HOURS_WEEKDAY_CLOSE}}"
     },
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Saturday", "Sunday"],
-      "opens": "08:00",
-      "closes": "16:00"
+      "opens": "{{HOURS_WEEKEND_OPEN}}",
+      "closes": "{{HOURS_WEEKEND_CLOSE}}"
     }
   ],
   "sameAs": []
@@ -81,13 +81,13 @@
 <header class="site-header">
   <div class="wrap">
     <a href="#topo" class="brand">
-      <span class="brand-badge">FJ</span>
+      <span class="brand-badge">{{BUSINESS_BADGE}}</span>
       <span class="brand-text">
-        <span class="brand-name">FRETE JUNIOR</span>
-        <span class="brand-sub">MANAUS · AM</span>
+        <span class="brand-name">{{BUSINESS_NAME_UPPER}}</span>
+        <span class="brand-sub">{{CITY_UPPER}} · {{STATE}}</span>
       </span>
     </a>
-    <a class="btn-wa" href="https://wa.me/5592999842312?text=Ol%C3%A1!%20Quero%20combinar%20um%20frete." target="_blank" rel="noopener">
+    <a class="btn-wa" href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Ol%C3%A1!%20Quero%20combinar%20um%20frete." target="_blank" rel="noopener">
       <img src="whatsapp.svg" class="wa-icon" alt="">WhatsApp
     </a>
   </div>
@@ -100,7 +100,7 @@
 
     <div>
       <div data-anim style="animation:heroRise .6s both" class="eyebrow">
-        <span class="eyebrow-line"></span>Frete urbano · Manaus e região
+        <span class="eyebrow-line"></span>Frete urbano · {{CITY}} e região
       </div>
       <h1 data-anim style="animation:heroRise .6s .07s both">
         Seu frete resolvido <em>hoje</em>, direto com o motorista.
@@ -109,7 +109,7 @@
         Mudança pequena, entrega urgente ou aquela carga que não coube no carro. Uma Chevrolet Montana LT, caçamba com lona e uma pessoa só do começo ao fim — sem central de atendimento, sem taxa surpresa.
       </p>
       <div data-anim style="animation:heroRise .6s .23s both" class="hero-ctas">
-        <a class="btn-wa" href="https://wa.me/5592999842312?text=Ol%C3%A1!%20Preciso%20de%20um%20frete." target="_blank" rel="noopener" style="font-size:16px;padding:15px 26px;box-shadow:0 3px 0 var(--whatsapp-shadow)">
+        <a class="btn-wa" href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Ol%C3%A1!%20Preciso%20de%20um%20frete." target="_blank" rel="noopener" style="font-size:16px;padding:15px 26px;box-shadow:0 3px 0 var(--whatsapp-shadow)">
           <img src="whatsapp.svg" class="wa-icon" alt="">Combinar pelo WhatsApp
         </a>
         <a class="btn-outline" href="#orcamento">Pedir orçamento</a>
@@ -153,7 +153,7 @@
   <div class="wrap">
     <span class="eyebrow eyebrow--red" style="margin-bottom:14px">O que eu carrego</span>
     <h2 class="on-light" style="max-width:16em">Três jeitos de resolver o transporte na cidade</h2>
-    <p class="section-lead">Se cabe na caçamba de uma Montana e é dentro de Manaus, provavelmente eu levo. Alguns exemplos reais:</p>
+    <p class="section-lead">Se cabe na caçamba de uma Montana e é dentro de {{CITY}}, provavelmente eu levo. Alguns exemplos reais:</p>
 
     <div class="service-grid">
       <div class="service-card">
@@ -234,7 +234,7 @@
   <div class="wrap area-grid">
     <div class="area-text">
       <span class="eyebrow eyebrow--red">Onde eu rodo</span>
-      <h2 class="on-light" style="max-width:14em">Manaus e um raio de <span style="color:var(--red)">25 km</span> ao redor</h2>
+      <h2 class="on-light" style="max-width:14em">{{CITY}} e um raio de <span style="color:var(--red)">{{RADIUS_KM}} km</span> ao redor</h2>
       <p>Atendo a cidade toda e as saídas mais próximas. Não achou seu bairro na lista? Me manda o endereço no WhatsApp que a gente vê se dá pra combinar.</p>
       <div class="chip-row">
         <span class="chip">Japiim</span>
@@ -259,7 +259,7 @@
           <span class="radar-dot"></span>
           <span class="radar-label">BASE · JAPIIM</span>
         </div>
-        <span class="radar-km">25 km</span>
+        <span class="radar-km">{{RADIUS_KM}} km</span>
       </div>
     </div>
   </div>
@@ -318,13 +318,13 @@
       <div class="form-bullets">
         <div><span class="bullet"></span>Resposta em minutos no horário de atendimento</div>
         <div><span class="bullet"></span>Sem compromisso: orçar é de graça</div>
-        <div><span class="bullet"></span>Prefere ligar? (92) 99984-2312</div>
+        <div><span class="bullet"></span>Prefere ligar? {{WHATSAPP_DISPLAY}}</div>
       </div>
     </div>
 
     <form id="quote-form" class="order-form" novalidate>
       <div class="order-head">
-        <span>ORDEM DE SERVIÇO</span><span>FRETE JUNIOR</span>
+        <span>ORDEM DE SERVIÇO</span><span>{{BUSINESS_NAME_UPPER}}</span>
       </div>
       <div class="field-grid">
         <label class="field">
@@ -440,7 +440,7 @@
       <h2>Tem carga pra levar? Manda a mensagem.</h2>
       <p>Combinamos o preço agora e resolvo o resto.</p>
     </div>
-    <a class="btn-dark" href="https://wa.me/5592999842312?text=Ol%C3%A1!%20Tenho%20uma%20carga%20pra%20levar." target="_blank" rel="noopener">
+    <a class="btn-dark" href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Ol%C3%A1!%20Tenho%20uma%20carga%20pra%20levar." target="_blank" rel="noopener">
       <img src="whatsapp.svg" class="wa-icon" alt="">Chamar no WhatsApp
     </a>
   </div>
@@ -450,39 +450,39 @@
   <div class="wrap footer-grid">
     <div>
       <div class="footer-brand">
-        <span class="brand-badge">FJ</span>
-        <span class="brand-name">FRETE JUNIOR</span>
+        <span class="brand-badge">{{BUSINESS_BADGE}}</span>
+        <span class="brand-name">{{BUSINESS_NAME_UPPER}}</span>
       </div>
-      <p>Frete autônomo em Manaus e região, com uma Chevrolet Montana LT 2027. Atendimento direto com o motorista.</p>
+      <p>Frete autônomo em {{CITY}} e região, com uma Chevrolet Montana LT 2027. Atendimento direto com o motorista.</p>
     </div>
     <div>
       <div class="footer-label">Contato</div>
       <div class="footer-links">
-        <a href="https://wa.me/5592999842312" target="_blank" rel="noopener">WhatsApp · (92) 99984-2312</a>
-        <a href="tel:+5592999842312">Telefone · (92) 99984-2312</a>
-        <a href="mailto:contato@fretejunior.com.br">contato@fretejunior.com.br</a>
+        <a href="https://wa.me/{{WHATSAPP_NUMBER}}" target="_blank" rel="noopener">WhatsApp · {{WHATSAPP_DISPLAY}}</a>
+        <a href="tel:+{{WHATSAPP_NUMBER}}">Telefone · {{WHATSAPP_DISPLAY}}</a>
+        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
       </div>
     </div>
     <div>
       <div class="footer-label">Atendimento</div>
       <div class="footer-hours">
-        <div><span>Seg – Sex</span><span>7h – 18h</span></div>
-        <div><span>Sáb - Dom</span><span>8h – 16h</span></div>
+        <div><span>{{HOURS_WEEKDAY_LABEL}}</span><span>{{HOURS_WEEKDAY_RANGE}}</span></div>
+        <div><span>{{HOURS_WEEKEND_LABEL}}</span><span>{{HOURS_WEEKEND_RANGE}}</span></div>
         <div><span>Urgência à noite</span><span>a combinar</span></div>
       </div>
     </div>
     <div class="footer-region">
       <div class="footer-label">Região</div>
-      <p>Manaus · AM<br>e raio de ~25 km</p>
+      <p>{{CITY}} · {{STATE}}<br>e raio de ~{{RADIUS_KM}} km</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© <span id="ano"></span> Frete Junior · Manaus/AM</span>
+    <span>© <span id="ano"></span> {{BUSINESS_NAME}} · {{CITY}}/{{STATE}}</span>
     <span>Frete urbano · mudanças · cargas em geral</span>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5592999842312?text=Ol%C3%A1!%20Preciso%20de%20um%20frete." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+<a class="wa-float" href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Ol%C3%A1!%20Preciso%20de%20um%20frete." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
    <img src="whatsapp.svg"  class="wa-icon" alt="whatsapp icon">
 </a>
 

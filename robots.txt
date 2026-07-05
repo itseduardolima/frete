@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fretejunior.com.br/sitemap.xml
