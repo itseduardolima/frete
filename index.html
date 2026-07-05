@@ -258,7 +258,7 @@
       </div>
     </div>
 
-    <form id="quote-form" class="order-form">
+    <form id="quote-form" class="order-form" novalidate>
       <div class="order-head">
         <span>ORDEM DE SERVIÇO</span><span>FRETE JUNIOR</span>
       </div>
@@ -266,20 +266,24 @@
         <label class="field">
           <span>Nome</span>
           <input name="nome" type="text" required autocomplete="name" placeholder="Seu nome">
+          <small class="field-help" data-default="Como você quer ser chamado.">Como você quer ser chamado.</small>
         </label>
         <label class="field">
-          <span>WhatsApp</span>
-          <input name="fone" type="tel" required autocomplete="tel" placeholder="(92) 90000-0000">
+          <span>Data</span>
+          <input name="data" type="date">
+          <small class="field-help" data-default="Se não souber ainda, deixe em branco.">Se não souber ainda, deixe em branco.</small>
         </label>
         <label class="field">
           <span>Origem</span>
           <input name="origem" type="text" required placeholder="Bairro / endereço de saída">
+          <small class="field-help" data-default="Bairro ou endereço completo de onde a carga sai.">Bairro ou endereço completo de onde a carga sai.</small>
         </label>
         <label class="field">
           <span>Destino</span>
           <input name="destino" type="text" required placeholder="Bairro / endereço de entrega">
+          <small class="field-help" data-default="Bairro ou endereço completo de entrega.">Bairro ou endereço completo de entrega.</small>
         </label>
-        <label class="field">
+        <label class="field field-full">
           <span>Tipo de carga</span>
           <select name="tipo" required>
             <option value="">Selecione…</option>
@@ -290,15 +294,13 @@
             <option>Carga em geral</option>
             <option>Outro</option>
           </select>
-        </label>
-        <label class="field">
-          <span>Data</span>
-          <input name="data" type="date">
+          <small class="field-help" data-default="Me ajuda a saber o que vou carregar.">Me ajuda a saber o que vou carregar.</small>
         </label>
       </div>
       <label class="field field-obs">
         <span>Observações</span>
         <textarea name="obs" rows="3" placeholder="Tem escada? Precisa ajudar a carregar? Peso aproximado?"></textarea>
+        <small class="field-help" data-default="Opcional, mas ajuda a chegar mais preparado.">Opcional, mas ajuda a chegar mais preparado.</small>
       </label>
       <button type="submit" class="submit-btn">
         <img src="whatsapp.svg" class="wa-icon" alt="">Enviar pelo WhatsApp
@@ -387,7 +389,7 @@
         <span class="brand-badge">FJ</span>
         <span class="brand-name">FRETE JUNIOR</span>
       </div>
-      <p>Frete autônomo (MEI) em Manaus e região, com uma Chevrolet Montana LT 2027. Atendimento direto com o motorista.</p>
+      <p>Frete autônomo em Manaus e região, com uma Chevrolet Montana LT 2027. Atendimento direto com o motorista.</p>
     </div>
     <div>
       <div class="footer-label">Contato</div>
@@ -400,8 +402,8 @@
     <div>
       <div class="footer-label">Atendimento</div>
       <div class="footer-hours">
-        <div><span>Seg – Sex</span><span>7h – 20h</span></div>
-        <div><span>Sábado</span><span>8h – 16h</span></div>
+        <div><span>Seg – Sex</span><span>7h – 18h</span></div>
+        <div><span>Sáb - Dom</span><span>8h – 16h</span></div>
         <div><span>Urgência à noite</span><span>a combinar</span></div>
       </div>
     </div>
@@ -417,7 +419,7 @@
 </footer>
 
 <a class="wa-float" href="https://wa.me/5592999842312?text=Ol%C3%A1!%20Preciso%20de%20um%20frete." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
-  <span class="dot"></span>WhatsApp
+   <img src="whatsapp.svg"  class="wa-icon" alt="whatsapp icon">
 </a>
 
 </div>
