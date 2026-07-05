@@ -784,13 +784,8 @@ h2.on-light {
   gap: clamp(32px, 5vw, 56px);
   align-items: start;
 }
-@media (max-width: 760px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-  .field-grid {
-    grid-template-columns: 1fr;
-  }
+.form-grid > * {
+  min-width: 0;
 }
 .form-copy p {
   font-size: 1.05rem;
@@ -845,6 +840,14 @@ h2.on-light {
 }
 .field-full {
   grid-column: 1 / -1;
+}
+@media (max-width: 760px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
 }
 label.field {
   display: flex;
