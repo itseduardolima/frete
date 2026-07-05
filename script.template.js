@@ -13,11 +13,35 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 const form = document.getElementById('quote-form');
 
 const validators = {
-  nome: (value) => (value.trim().length < 2 ? 'Digite seu nome completo.' : ''),
+  nome: (value) => {
+    const nome = value.trim();
+    if (nome.length < 2) return 'Digite seu nome completo.';
+    if (/\d/.test(nome)) return 'Nome não pode conter números.';
+    return '';
+  },
+  data: (value) => {
+    if (!value) return '';
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+    const escolhida = new Date(value + 'T00:00:00');
+    return escolhida < hoje ? 'Escolha a data de hoje ou uma data futura.' : '';
+  },
   origem: (value) => (value.trim().length < 3 ? 'Diz de onde a carga sai.' : ''),
   destino: (value) => (value.trim().length < 3 ? 'Diz pra onde a carga vai.' : ''),
   tipo: (value) => (!value ? 'Selecione o tipo de carga.' : '')
 };
+
+const dataInput = document.getElementById('data-input');
+if (dataInput) {
+  const hoje = new Date();
+  const iso = new Date(hoje.getTime() - hoje.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  dataInput.setAttribute('min', iso);
+}
+
+const nomeInput = form.elements['nome'];
+nomeInput.addEventListener('beforeinput', (e) => {
+  if (e.data && /\d/.test(e.data)) e.preventDefault();
+});
 
 const getFieldEls = (name) => {
   const input = form.elements[name];

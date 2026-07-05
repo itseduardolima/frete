@@ -329,12 +329,12 @@
       <div class="field-grid">
         <label class="field">
           <span>Nome</span>
-          <input name="nome" type="text" required autocomplete="name" placeholder="Seu nome">
+          <input name="nome" type="text" required autocomplete="name" placeholder="Seu nome" pattern="[^0-9]*" inputmode="text">
           <small class="field-help" data-default="Como você quer ser chamado.">Como você quer ser chamado.</small>
         </label>
         <label class="field">
           <span>Data</span>
-          <input name="data" type="date">
+          <input name="data" type="date" id="data-input">
           <small class="field-help" data-default="Se não souber ainda, deixe em branco.">Se não souber ainda, deixe em branco.</small>
         </label>
         <label class="field">
